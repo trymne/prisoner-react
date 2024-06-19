@@ -1,0 +1,104 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+article:nth-of-type(2n + 1) a.project-links, article:nth-of-type(2n + 1) button#project {
+  --hover-color: var(--text-light);
+  --color: var(--dark-bg);
+  color: var(--link-dark);
+}
+
+article:nth-of-type(2n +1) a.project-links:hover, article:nth-of-type(2n + 1) button#project:hover, article:nth-of-type(2n +1) a.project-links:focus-visible, article:nth-of-type(2n + 1) button#project:focus-visible {
+  --color: var(--link-dark);
+  color: var(--text-light);
+}
+
+
+.project-links {
+
+  --b: 3px;  
+  --s: .45em; 
+  --color: var(--text-light);
+  --hover-color: black;
+  font-size: 1em;
+  color: var(--clr--purple);
+  font-weight: 500;
+  padding: .5em 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  width: 8em;
+  box-sizing: border-box;
+  text-align: center;
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+a.link {
+  color: var(--link-dark);
+  text-decoration: none;
+}
+
+button#project:hover,
+button#project:focus-visible, a.project-links:hover, a.project-links:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+  --color: var(--clr--purple);
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+button#project:active, a.project-links:active {
+  background: var(--color);
+  color: #fff;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
